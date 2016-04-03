@@ -1,0 +1,11 @@
+- name: Install latest git
+  hosts: "{{host_group}}"
+  become: True
+  tasks:
+    - name: Add git ppa
+      apt_repository:
+        repo: "ppa:git-core/ppa"
+    - name: install git
+      apt:
+        package: git
+        state: latest
