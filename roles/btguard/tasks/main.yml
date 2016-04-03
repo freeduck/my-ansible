@@ -1,0 +1,17 @@
+- name: Install openvpn
+  apt:
+    name: openvpn
+    update_cache: yes
+    cache_valid_time: 3600
+- name: Copy BT Guard config
+  copy:
+    src: btguard.conf
+    dest: /etc/openvpn
+- name: Copy BT Guard CA
+  copy:
+    src: btguard.ca.crt
+    dest: /etc/openvpn
+- name: Credentials
+  copy:
+    src: credentials
+    dest: /etc/openvpn
