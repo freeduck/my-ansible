@@ -1,0 +1,6 @@
+---
+- name: Sickrage
+  hosts: "sickrage"
+  become: True
+  roles:
+    - sickrage

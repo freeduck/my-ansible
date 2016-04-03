@@ -1,0 +1,16 @@
+- name: Install dependencies
+  apt:
+    name: "{{ item }}"
+    update_cache: yes
+    cache_valid_time: 3600
+  with_items:
+    - "libxslt1-dev"
+    - "libxslt1.1"
+    - "libxml2-dev"
+    - "libxml2"
+    - "libssl-dev"
+    - "libffi-dev"
+    - "python-pip"
+    - "python-dev"
+    - "libssl-dev"
+    - "git"
