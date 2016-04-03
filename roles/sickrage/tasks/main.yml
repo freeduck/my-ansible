@@ -24,3 +24,12 @@
   git:
     repo: "https://github.com/SickRage/SickRage.git"
     dest: /opt/sickrage
+- name: Create Sickrage user
+  user:
+    name: sickrage
+    system: yes
+- name: Asign ownershipt og sickrage to sickrage user
+  file:
+    path: "/opt/sickrage"
+    owner: sickrage
+    recurse: yes
