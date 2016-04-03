@@ -10,7 +10,17 @@
     - "libxml2"
     - "libssl-dev"
     - "libffi-dev"
+    - "python-setuptools"
     - "python-pip"
     - "python-dev"
     - "libssl-dev"
     - "git"
+    - "unrar"
+    - "build-essential"
+- name: Install pyopenssl dependency from pip
+  pip:
+    name: "pyopenssl"
+- name: Install Sickrage
+  git:
+    repo: "https://github.com/SickRage/SickRage.git"
+    dest: /opt/sickrage

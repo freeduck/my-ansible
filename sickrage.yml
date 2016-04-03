@@ -1,6 +1,6 @@
 ---
 - name: Sickrage
-  hosts: "sickrage"
+  hosts: sickrage-group
   become: True
   roles:
     - sickrage
